@@ -13,7 +13,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="left"
-        android:text="J’Foodage"
+        android:text="@string/app_name"
         android:textStyle="bold"
         android:backgroundTint="@color/black"
         android:textSize="25sp"

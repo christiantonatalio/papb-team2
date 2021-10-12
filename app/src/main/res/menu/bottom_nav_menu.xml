@@ -12,17 +12,17 @@
 
     <item
         android:id="@+id/navigation_beverage"
-        android:icon="@drawable/ic_info_black_24"
+        android:icon="@drawable/ic_beverages"
         android:title="@string/title_beverage" />
 
     <item
         android:id="@+id/navigation_food"
-        android:icon="@drawable/ic_food_black_24"
+        android:icon="@drawable/ic_food"
         android:title="@string/title_food" />
 
     <item
         android:id="@+id/navigation_restaurant"
-        android:icon="@drawable/ic_restaurant_black_24"
-        android:title="@string/title_restaurant" />
+        android:icon="@drawable/ic_popular"
+        android:title="@string/popular" />
 
 </menu>
