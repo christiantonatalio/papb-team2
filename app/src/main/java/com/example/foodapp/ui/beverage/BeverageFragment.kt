@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.databinding.FragmentBeverageBinding
 import com.example.foodapp.model.Beverage
 
@@ -34,10 +35,13 @@ class BeverageFragment : Fragment() {
         beverageViewModel.getBeverages()
         val beverages = beverageViewModel.listBeverages
 
-//        showRecyclerView(beverages)
+        showRecyclerView(beverages)
     }
 
-//    private fun showRecyclerView(beverages: ArrayList<Beverage>) {
-//        val
-//    }
+    private fun showRecyclerView(beverages: ArrayList<Beverage>) {
+        val beverageAdapter = BeverageAdapter(beverages)
+        binding.rvBeverages.layoutManager = LinearLayoutManager(activity)
+        binding.rvBeverages.adapter = beverageAdapter
+    }
+
 }
