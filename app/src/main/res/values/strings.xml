@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Food App</string>
+    <string name="app_name">J\'Foodage</string>
     <string name="title_food">Food</string>
     <string name="title_restaurant">Restaurant</string>
     <string name="title_about">About</string>
@@ -12,4 +12,5 @@
     <string name="beverage_description">Mutiara yang terbuat dari tapioka. Biasanya disajikan sebagai topping dalam berbagai minuman.</string>
     <string name="title_about_app">About App</string>
     <string name="popular">Popular</string>
+    <string name="app_description">This app will help you find out about favorite street food, beverages, popular brands and places in Yogyakarta. Bon appetit!</string>
 </resources>
