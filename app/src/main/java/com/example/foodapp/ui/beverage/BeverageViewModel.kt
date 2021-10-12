@@ -3,11 +3,15 @@ package com.example.foodapp.ui.beverage
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.foodapp.helper.BeverageData
+import com.example.foodapp.model.Beverage
 
 class BeverageViewModel : ViewModel()
 {
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Bevarage Fragment"
+    var listBeverages = ArrayList<Beverage>()
+
+    fun getBeverages(){
+        listBeverages = BeverageData.listData
     }
-    val text: LiveData<String> = _text
+
 }

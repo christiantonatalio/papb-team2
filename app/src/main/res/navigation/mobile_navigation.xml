@@ -6,21 +6,27 @@
     app:startDestination="@+id/navigation_food">
 
     <fragment
-        android:id="@+id/navigation_beverage"
-        android:name="com.example.foodapp.ui.beverage.BeverageFragment"
-        android:label="@string/title_beverage"
-        tools:layout="@layout/fragment_beverage" />
-
-    <fragment
         android:id="@+id/navigation_food"
         android:name="com.example.foodapp.ui.food.FoodFragment"
         android:label="@string/title_food"
         tools:layout="@layout/fragment_food" />
 
     <fragment
+        android:id="@+id/navigation_beverage"
+        android:name="com.example.foodapp.ui.beverage.BeverageFragment"
+        android:label="@string/title_beverage"
+        tools:layout="@layout/fragment_beverage" />
+
+    <fragment
         android:id="@+id/navigation_restaurant"
         android:name="com.example.foodapp.ui.restaurant.RestaurantFragment"
         android:label="@string/title_restaurant"
         tools:layout="@layout/fragment_restaurant" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.example.foodapp.ui.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
 
 </navigation>
