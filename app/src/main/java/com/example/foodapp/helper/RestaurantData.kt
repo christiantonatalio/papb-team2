@@ -1,6 +1,7 @@
 package com.example.foodapp.helper
 
 import com.example.foodapp.R
+import com.example.foodapp.model.Restaurant
 
 object RestaurantData {
     private val names = arrayOf(
@@ -74,4 +75,19 @@ object RestaurantData {
         R.drawable.wedangronde_mbahpaiyem,
         R.drawable.wedangtahu_busukardi
     )
+
+    val listData: ArrayList<Restaurant>
+        get(){
+            val list = arrayListOf<Restaurant>()
+            for (position in names.indices){
+                val restaurant = Restaurant(
+                    names[position],
+                    address[position],
+                    priceRange[position],
+                    image[position]
+                )
+                list.add(restaurant)
+            }
+            return list
+        }
 }
