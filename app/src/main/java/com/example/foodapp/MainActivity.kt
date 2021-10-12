@@ -35,14 +35,5 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.about_app ->{
-                val mIntent = Intent(this, AboutActivity::class.java)
-                startActivity(mIntent)
-            }
-        }
-        return true
 
-    }
 }

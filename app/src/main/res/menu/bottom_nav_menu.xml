@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">>
-
-
-    <item
-        android:id="@+id/about_app"
-        android:icon="@drawable/ic_info_black_24"
-        android:title="@string/title_about_app"
-        app:showAsAction="collapseActionView|always"/>
-
-    <item
-        android:id="@+id/navigation_beverage"
-        android:icon="@drawable/ic_beverages"
-        android:title="@string/title_beverage" />
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/navigation_food"
@@ -21,8 +9,18 @@
         android:title="@string/title_food" />
 
     <item
+        android:id="@+id/navigation_beverage"
+        android:icon="@drawable/ic_beverages"
+        android:title="@string/title_beverage" />
+
+    <item
         android:id="@+id/navigation_restaurant"
         android:icon="@drawable/ic_popular"
         android:title="@string/popular" />
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_info_black_24"
+        android:title="@string/title_about" />
 
 </menu>
