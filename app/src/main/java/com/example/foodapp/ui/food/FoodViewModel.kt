@@ -1,11 +1,14 @@
 package com.example.foodapp.ui.food
 
 import androidx.lifecycle.ViewModel
+import com.example.foodapp.helper.FoodData
+import com.example.foodapp.model.Food
 
 class FoodViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Food Fragment"
+    var listFood = ArrayList<Food>()
+
+    fun getFood(){
+        listFood = FoodData.listData
     }
-    val text: LiveData<String> = _text
 }
