@@ -1,7 +1,5 @@
 package com.example.foodapp.ui.food
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.foodapp.helper.FoodData
 import com.example.foodapp.model.Food
