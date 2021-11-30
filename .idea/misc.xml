@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/drawable/ic_food_black_24.xml" value="0.2755208333333333" />
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/layout/fragment_favorite_restaurant.xml" value="0.12613981762917933" />
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/layout/fragment_restaurant.xml" value="0.23731884057971014" />
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/layout/item_beverage.xml" value="0.2" />
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/layout/item_restaurant.xml" value="0.176" />
+        <entry key="..\:/KULIAH/MATERI KULIAH/NON TUTOR/SEMESTER 5/Mobdev/Food App/app/src/main/res/layout/item_restuarant.xml" value="0.4" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.13796296296296295" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/layout/activity_about.xml" value="0.3903192584963955" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/layout/fragment_beverage.xml" value="0.25" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/layout/item_beverage.xml" value="0.33" />
+        <entry key="..\:/My Programs/papb-team2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.5301724137931034" />
+        <entry key="..\:/Users/natal/AndroidStudioProjects/papb-team2/app/src/main/res/layout/fragment_bevarage.xml" value="0.1" />
+        <entry key="..\:/Users/natal/AndroidStudioProjects/papb-team2/app/src/main/res/layout/fragment_blank.xml" value="0.10182370820668693" />
+        <entry key="..\:/Users/natal/AndroidStudioProjects/papb-team2/app/src/main/res/layout/fragment_food.xml" value="0.1" />
+        <entry key="..\:/Users/natal/AndroidStudioProjects/papb-team2/app/src/main/res/layout/fragment_restaurant.xml" value="0.1" />
+        <entry key="..\:/Users/natal/AndroidStudioProjects/papb-team2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20277777777777778" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

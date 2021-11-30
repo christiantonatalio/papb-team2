@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">J\'Foodage</string>
+    <string name="title_food">Food</string>
+    <string name="title_restaurant">Restaurant</string>
+    <string name="title_about">About</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_beverage">Beverage</string>
+    <string name="food_description">Hidangan penutup dengan cita rasa manis, yang terbuat dari beras ketan yang direbus dengan air berlebih hingga lunak, dan biasa disajikan dengan santan.</string>
+    <string name="restaurant_address">Jalan Wongsodirjan, Gedong Tengen, Sosromenduran, Kota Yogyakarta, Daerah Istimewa Yogyakarta</string>
+    <string name="restaurant_price">Mulai dari 1000</string>
+    <string name="beverage_description">Mutiara yang terbuat dari tapioka. Biasanya disajikan sebagai topping dalam berbagai minuman.</string>
+    <string name="title_about_app">About App</string>
+    <string name="popular">Popular</string>
+    <string name="app_description">This app will help you find out about favorite street food, beverages, popular brands and places in Yogyakarta. Bon appetit!</string>
+    <string name="title_fav_beverage">Favorite Beverages</string>
+    <string name="title_favorite">Favorite</string>
+    <string name="title_alarm">Alarm</string>
+    <string name="key_on">on</string>
+    <string name="title_on">Daily Reminder at 7AM, 12PM, and 7PM</string>
+    <string name="alarm_on">Alarm is on</string>
+    <string name="alarm_off">Alarm is off</string>
+    <string name="alarm_title">Meal Reminder</string>
+    <string name="alarm_message">Bingung mau makan apa? yuk cek aplikasi J\'Foodage</string>
+</resources>
