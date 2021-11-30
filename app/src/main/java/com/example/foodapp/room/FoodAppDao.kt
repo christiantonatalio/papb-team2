@@ -27,9 +27,15 @@ fun deleteBeverage(beverage: Beverage)
 @Delete
 fun deleteRestaurant(restaurant: Restaurant)
 
+@Delete
+fun deleteFood(food: Food)
+
 @Query ("SELECT * FROM beverage_table")
 fun getBeverage() : LiveData<List<Beverage>>
 
 @Query("SELECT * FROM restaurant_table")
 fun getRestaurant() : LiveData<List<Restaurant>>
+
+@Query ("SELECT * FROM beverage_table")
+fun getFood() : LiveData<List<Food>>
 }

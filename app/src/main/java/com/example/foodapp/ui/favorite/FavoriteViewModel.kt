@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.example.foodapp.model.Beverage
 import com.example.foodapp.model.Restaurant
+import com.example.foodapp.model.Food
 import com.example.foodapp.room.FoodAppDao
 import com.example.foodapp.room.FoodAppDatabase
 import java.util.concurrent.ExecutorService
@@ -39,4 +40,13 @@ class FavoriteViewModel(application: Application) : ViewModel() {
         executorService.execute{ mfoodAppDao.deleteRestaurant(restaurant) }
     }
 
+    fun getFood(): LiveData<List<Food>> = mfoodAppDao.getFood()
+
+    fun insertFood(food: Food){
+        executorService.execute{ mfoodAppDao.insertFood(food) }
+    }
+
+    fun deleteFood(food: Food){
+        executorService.execute{ mfoodAppDao.deleteFood(food) }
+    }
 }
