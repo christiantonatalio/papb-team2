@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.R
 import com.example.foodapp.ViewModelFactory
-import com.example.foodapp.databinding.FragmentFoodBinding
+import com.example.foodapp.databinding.FragmentFavoriteFoodBinding
 import com.example.foodapp.model.Food
 import com.example.foodapp.ui.food.FoodAdapter
 import com.example.foodapp.ui.food.FoodViewModel
@@ -19,7 +19,7 @@ import com.example.foodapp.ui.food.FoodViewModel
 class FavoriteFoodFragment : Fragment() {
 
     private lateinit var favoriteViewModel: FavoriteViewModel
-    private lateinit var binding: FragmentFoodBinding
+    private lateinit var binding: FragmentFavoriteFoodBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,7 +27,7 @@ class FavoriteFoodFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentFoodBinding.inflate(inflater, container, false)
+        binding = FragmentFavoriteFoodBinding.inflate(inflater, container, false)
         return binding.root
     }
 

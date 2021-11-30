@@ -36,6 +36,7 @@ class FoodAdapter (private val listFood: List<Food>, private val listFavFood: Li
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val food = listFood[position]
         var isFav = setFav(food) ?: false
+        Log.d("isOn?", isFav.toString())
         if(isFav){
             holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_true)
         }
@@ -52,6 +53,7 @@ class FoodAdapter (private val listFood: List<Food>, private val listFavFood: Li
                 holder.favoriteViewModel.deleteFood(food)
                 holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_false)
             } else{
+                Log.d("Added", food.toString())
                 holder.favoriteViewModel.insertFood(food)
                 holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_true)
             }

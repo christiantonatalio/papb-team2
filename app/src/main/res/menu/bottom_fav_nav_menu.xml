@@ -4,17 +4,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_food"
+        android:id="@+id/navigation_fav_food"
         android:icon="@drawable/ic_food"
-        android:title="@string/title_food" />
+        android:title="@string/title_fav_food" />
 
     <item
         android:id="@+id/navigation_fav_beverage"
         android:icon="@drawable/ic_beverages"
-        android:title="@string/title_beverage" />
+        android:title="@string/title_fav_beverage" />
 
     <item
-        android:id="@+id/navigation_restaurant"
+        android:id="@+id/navigation_fav_restaurant"
         android:icon="@drawable/ic_popular"
-        android:title="@string/popular" />
+        android:title="@string/title_fav_restaurant" />
 </menu>

@@ -36,6 +36,6 @@ fun getBeverage() : LiveData<List<Beverage>>
 @Query("SELECT * FROM restaurant_table")
 fun getRestaurant() : LiveData<List<Restaurant>>
 
-@Query ("SELECT * FROM beverage_table")
+@Query ("SELECT * FROM food_table")
 fun getFood() : LiveData<List<Food>>
 }

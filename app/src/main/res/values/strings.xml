@@ -14,6 +14,8 @@
     <string name="popular">Popular</string>
     <string name="app_description">This app will help you find out about favorite street food, beverages, popular brands and places in Yogyakarta. Bon appetit!</string>
     <string name="title_fav_beverage">Favorite Beverages</string>
+    <string name="title_fav_food">Favorite Foods</string>
+    <string name="title_fav_restaurant">Favorite Restaurants</string>
     <string name="title_favorite">Favorite</string>
     <string name="title_alarm">Alarm</string>
     <string name="key_on">on</string>
