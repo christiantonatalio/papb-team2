@@ -51,7 +51,7 @@ class RestaurantAdapter (private val listRestaurant: List<Restaurant>, private v
         holder.binding.btnFav.setOnClickListener {
             Log.d("isClicked", isFav.toString())
             if(isFav){
-                holder.favoriteViewModel.deleteRestaurat(restaurant)
+                holder.favoriteViewModel.deleteRestaurant(restaurant)
                 holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_false)
             } else{
                 holder.favoriteViewModel.insertRestaurant(restaurant)
