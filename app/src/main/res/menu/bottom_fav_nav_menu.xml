@@ -9,7 +9,7 @@
         android:title="@string/title_food" />
 
     <item
-        android:id="@+id/navigation_beverage"
+        android:id="@+id/navigation_fav_beverage"
         android:icon="@drawable/ic_beverages"
         android:title="@string/title_beverage" />
 
@@ -17,10 +17,4 @@
         android:id="@+id/navigation_restaurant"
         android:icon="@drawable/ic_popular"
         android:title="@string/popular" />
-
-    <item
-        android:id="@+id/navigation_about"
-        android:icon="@drawable/ic_info_black_24"
-        android:title="@string/title_about" />
-
 </menu>

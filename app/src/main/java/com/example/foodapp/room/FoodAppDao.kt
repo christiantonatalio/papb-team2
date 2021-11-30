@@ -24,18 +24,12 @@ fun insertRestaurant(restaurant: Restaurant)
 @Delete
 fun deleteBeverage(beverage: Beverage)
 
-@Query("DELETE FROM food_table")
-fun deleteFood()
-
-@Query("DELETE FROM restaurant_table")
-fun deleteRestaurant()
+@Delete
+fun deleteRestaurant(beverage: Restaurant)
 
 @Query ("SELECT * FROM beverage_table")
 fun getBeverage() : LiveData<ArrayList<Beverage>>
 
-@Query ("SELECT * FROM food_table")
-fun getFood()
-
 @Query("SELECT * FROM restaurant_table")
-fun getRestaurant()
+fun getRestaurant() : LiveData<ArrayList<Restaurant>>
 }
