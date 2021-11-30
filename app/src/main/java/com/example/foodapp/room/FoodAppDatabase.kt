@@ -8,7 +8,7 @@ import com.example.foodapp.model.Beverage
 import com.example.foodapp.model.Food
 import com.example.foodapp.model.Restaurant
 
-@Database(entities = [Beverage::class, Food::class, Restaurant::class], version = 1, exportSchema = false)
+@Database(entities = [Beverage::class, Food::class], version = 1, exportSchema = false)
 abstract class FoodAppDatabase : RoomDatabase() {
     abstract val foodAppDao: FoodAppDao
 

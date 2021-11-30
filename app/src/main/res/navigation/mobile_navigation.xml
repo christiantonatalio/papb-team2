@@ -24,9 +24,15 @@
         tools:layout="@layout/fragment_restaurant" />
 
     <fragment
-        android:id="@+id/navigation_about"
-        android:name="com.example.foodapp.ui.about.AboutFragment"
-        android:label="@string/title_about"
-        tools:layout="@layout/fragment_about" />
+        android:id="@+id/navigation_fav_beverage"
+        android:name="com.example.foodapp.FavoritBeverage"
+        android:label="@string/title_fav_beverage"
+        tools:layout="@layout/fragment_restaurant" />
+
+<!--    <fragment-->
+<!--        android:id="@+id/navigation_about"-->
+<!--        android:name="com.example.foodapp.ui.about.AboutFragment"-->
+<!--        android:label="@string/title_about"-->
+<!--        tools:layout="@layout/fragment_about" />-->
 
 </navigation>

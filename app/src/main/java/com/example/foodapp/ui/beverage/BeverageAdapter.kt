@@ -26,6 +26,7 @@ class BeverageAdapter (private val listBeverage: ArrayList<Beverage>) : Recycler
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val beverage = listBeverage[position]
+        var isFav = setFav() ?: false
 
         Glide.with(holder.itemView.context)
             .load(beverage.image)
@@ -34,6 +35,20 @@ class BeverageAdapter (private val listBeverage: ArrayList<Beverage>) : Recycler
 
         holder.binding.txtName.text = beverage.name
         holder.binding.txtDescrption.text = beverage.description
+        holder.binding.btnFav.setOnClickListener {
+            if(isFav){
+                //update fav
+                holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_false)
+            } else{
+                //update fav
+                holder.binding.btnFav.setBackgroundResource(R.drawable.ic_fav_true)
+            }
+            isFav = !isFav
+        }
+    }
+
+    private fun setFav(): Boolean? {
+        return false
     }
 
     override fun getItemCount(): Int {
