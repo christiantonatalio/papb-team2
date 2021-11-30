@@ -1,4 +1,4 @@
-package com.example.foodapp.ui.beverage
+package com.example.foodapp.ui.favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,18 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.foodapp.ui.favorite.FavoriteViewModel
 import com.example.foodapp.ViewModelFactory
-import com.example.foodapp.databinding.FragmentBeverageBinding
+import com.example.foodapp.databinding.FragmentFavoritBeverageBinding
 import com.example.foodapp.model.Beverage
+import com.example.foodapp.ui.beverage.BeverageAdapter
 
-class BeverageFragment : Fragment() {
-    private val beverageViewModel: BeverageViewModel by viewModels()
+
+class FavoritBeverage : Fragment() {
+
     private lateinit var favoriteViewModel: FavoriteViewModel
-    private lateinit var binding: FragmentBeverageBinding
+    private lateinit var binding: FragmentFavoritBeverageBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,27 +25,25 @@ class BeverageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentBeverageBinding.inflate(inflater, container, false)
+        binding = FragmentFavoritBeverageBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
         showListBeverages()
     }
 
     private fun showListBeverages() {
-        beverageViewModel.getBeverages()
-        val beverages = beverageViewModel.listBeverages as List<Beverage>
-        favoriteViewModel.getBeverages().observe(viewLifecycleOwner, { favBeverages ->
-            showRecyclerView(beverages, favBeverages)
+        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
+        favoriteViewModel.getBeverages().observe(viewLifecycleOwner, { beverages ->
+            showRecyclerView(beverages)
         })
     }
 
-    private fun showRecyclerView(beverages: List<Beverage>, favBeverages: List<Beverage>) {
-        val beverageAdapter = BeverageAdapter(beverages, favBeverages, activity as AppCompatActivity)
+    private fun showRecyclerView(beverages: List<Beverage>) {
+        val beverageAdapter = BeverageAdapter(beverages, beverages, activity as AppCompatActivity)
         binding.rvBeverages.layoutManager = LinearLayoutManager(activity)
         binding.rvBeverages.adapter = beverageAdapter
     }

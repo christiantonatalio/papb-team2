@@ -60,6 +60,7 @@ object FoodData {
             val list = arrayListOf<Food>()
             for (position in names.indices){
                 val food = Food(
+                    position+1,
                     names[position],
                     description[position],
                     image[position]

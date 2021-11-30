@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_food"
+        android:icon="@drawable/ic_food"
+        android:title="@string/title_food" />
+
+    <item
+        android:id="@+id/navigation_fav_beverage"
+        android:icon="@drawable/ic_beverages"
+        android:title="@string/title_beverage" />
+
+    <item
+        android:id="@+id/navigation_restaurant"
+        android:icon="@drawable/ic_popular"
+        android:title="@string/popular" />
+</menu>
