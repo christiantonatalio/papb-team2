@@ -1,26 +1,23 @@
-package com.example.foodapp.ui.restaurant
+package com.example.foodapp.ui.favorite
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.foodapp.R
 import com.example.foodapp.ViewModelFactory
 import com.example.foodapp.databinding.FragmentRestaurantBinding
-import com.example.foodapp.model.Beverage
 import com.example.foodapp.model.Restaurant
-import com.example.foodapp.ui.beverage.BeverageAdapter
-import com.example.foodapp.ui.favorite.FavoriteViewModel
+import com.example.foodapp.ui.restaurant.RestaurantAdapter
+import com.example.foodapp.ui.restaurant.RestaurantViewModel
 
-class RestaurantFragment : Fragment() {
+class FavoriteRestaurantFragment : Fragment() {
 
-    private val restaurantViewModel: RestaurantViewModel by viewModels()
     private lateinit var favoriteViewModel: FavoriteViewModel
     private lateinit var binding: FragmentRestaurantBinding
 
@@ -37,26 +34,25 @@ class RestaurantFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
         showListRestaurant()
     }
 
     private fun showListRestaurant() {
-        restaurantViewModel.getRestaurant()
-        val restaurant = restaurantViewModel.listRestaurant as List<Restaurant>
+        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
         favoriteViewModel.getRestaurant().observe(viewLifecycleOwner, { favRestaurant ->
-            showRecyclerView(restaurant, favRestaurant)
+            showRecyclerView(favRestaurant)
         })
     }
 
-    private fun showRecyclerView(restaurant:List<Restaurant>, favRestaurant: List<Restaurant>) {
-            val restaurantAdapter =RestaurantAdapter(restaurant, favRestaurant, activity as AppCompatActivity)
-            binding.rvRestaurant.layoutManager = LinearLayoutManager(activity)
-            binding.rvRestaurant.adapter = restaurantAdapter
-        }
+    private fun showRecyclerView(favRestaurant: List<Restaurant>) {
+        val restaurantAdapter =
+            RestaurantAdapter(favRestaurant, favRestaurant, activity as AppCompatActivity)
+        binding.rvRestaurant.layoutManager = LinearLayoutManager(activity)
+        binding.rvRestaurant.adapter = restaurantAdapter
+    }
 
     private fun obtainViewModel(activity: AppCompatActivity): FavoriteViewModel {
-            val factory = ViewModelFactory.getInstance(activity.application)
-            return ViewModelProvider(activity, factory).get(FavoriteViewModel::class.java)
-        }
+        val factory = ViewModelFactory.getInstance(activity.application)
+        return ViewModelProvider(activity, factory).get(FavoriteViewModel::class.java)
+    }
 }

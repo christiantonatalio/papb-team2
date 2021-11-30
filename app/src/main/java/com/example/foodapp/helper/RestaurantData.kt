@@ -81,6 +81,7 @@ object RestaurantData {
             val list = arrayListOf<Restaurant>()
             for (position in names.indices){
                 val restaurant = Restaurant(
+                    position+1,
                     names[position],
                     address[position],
                     priceRange[position],
