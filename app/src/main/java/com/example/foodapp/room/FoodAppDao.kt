@@ -1,27 +1,21 @@
 package com.example.foodapp.room
 
+import androidx.lifecycle.LiveData
+import androidx.room.Dao
+import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
 import com.example.foodapp.model.Beverage
-import com.example.foodapp.model.Food
 
+@Dao
 interface FoodAppDao {
+
 @Insert
 fun insertBeverage(beverage: Beverage)
 
-@Insert
-fun insertFood(food: Food)
-
-@Query ("DELETE FROM beverage_table")
-fun deleteBeverage()
-
-@Query("DELETE FROM food_table")
-fun deleteFood()
+@Delete
+fun deleteBeverage(beverage: Beverage)
 
 @Query ("SELECT * FROM beverage_table")
-fun getBeverage()
-
-@Query ("SELECT * FROM food_table")
-fun getFood()
+fun getBeverage() : LiveData<ArrayList<Beverage>>
 }

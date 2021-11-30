@@ -62,9 +62,9 @@ object BeverageData {
             val list = arrayListOf<Beverage>()
             for (position in names.indices){
                 val beverage = Beverage(
-                    names[position],
-                    description[position],
-                    image[position]
+                    name = names[position],
+                    description = description[position],
+                    image = image[position]
                 )
                 list.add(beverage)
             }
