@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.ui.favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,14 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.foodapp.databinding.FragmentBeverageBinding
+import com.example.foodapp.ViewModelFactory
 import com.example.foodapp.databinding.FragmentFavoritBeverageBinding
 import com.example.foodapp.model.Beverage
 import com.example.foodapp.ui.beverage.BeverageAdapter
-import com.example.foodapp.ui.beverage.BeverageViewModel
 
 
 class FavoritBeverage : Fragment() {
@@ -34,18 +32,18 @@ class FavoritBeverage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
         showListBeverages()
     }
 
     private fun showListBeverages() {
-        favoriteViewModel.getBeverage().observe(viewLifecycleOwner, {beverages ->
+        favoriteViewModel = obtainViewModel(activity as AppCompatActivity)
+        favoriteViewModel.getBeverages().observe(viewLifecycleOwner, { beverages ->
             showRecyclerView(beverages)
         })
     }
 
-    private fun showRecyclerView(beverages: ArrayList<Beverage>) {
-        val beverageAdapter = BeverageAdapter(beverages)
+    private fun showRecyclerView(beverages: List<Beverage>) {
+        val beverageAdapter = BeverageAdapter(beverages, beverages, activity as AppCompatActivity)
         binding.rvBeverages.layoutManager = LinearLayoutManager(activity)
         binding.rvBeverages.adapter = beverageAdapter
     }

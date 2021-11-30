@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.ui.favorite
 
 import android.app.Application
 import androidx.lifecycle.LiveData
@@ -18,7 +18,7 @@ class FavoriteViewModel(application: Application) : ViewModel() {
         mfoodAppDao = db.foodAppDao
     }
 
-    fun getBeverage(): LiveData<ArrayList<Beverage>> = mfoodAppDao.getBeverage()
+    fun getBeverages(): LiveData<List<Beverage>> = mfoodAppDao.getBeverage()
 
     fun insertBeverage(beverage: Beverage){
         executorService.execute{ mfoodAppDao.insertBeverage(beverage) }

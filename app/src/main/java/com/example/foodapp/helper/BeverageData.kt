@@ -4,6 +4,7 @@ import com.example.foodapp.R
 import com.example.foodapp.model.Beverage
 
 object BeverageData {
+
     private val names = arrayOf(
         "Boba",
         "Cheestea",
@@ -62,6 +63,7 @@ object BeverageData {
             val list = arrayListOf<Beverage>()
             for (position in names.indices){
                 val beverage = Beverage(
+                    id = position+1,
                     name = names[position],
                     description = description[position],
                     image = image[position]

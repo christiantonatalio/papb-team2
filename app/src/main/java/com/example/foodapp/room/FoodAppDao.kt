@@ -17,5 +17,5 @@ fun insertBeverage(beverage: Beverage)
 fun deleteBeverage(beverage: Beverage)
 
 @Query ("SELECT * FROM beverage_table")
-fun getBeverage() : LiveData<ArrayList<Beverage>>
+fun getBeverage() : LiveData<List<Beverage>>
 }
